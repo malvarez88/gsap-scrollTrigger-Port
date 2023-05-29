@@ -67,7 +67,7 @@ section.character:before {
 .caption {
     position: absolute;
     bottom: 4rem;
-    left: 3rem;
+    left: 4rem;
     width: 30%;
     font-weight: 400;
     color: #444;
@@ -81,8 +81,10 @@ section.character:before {
     height: 70vh;
     width: auto;
     left: 4rem;
+    bottom: -10rem;
     transform: translateY(-100%);
-    mix-blend-mode: color-burn;
+    /* mix-blend-mode:exclusion */
+
 }
 
 .huge-text {
