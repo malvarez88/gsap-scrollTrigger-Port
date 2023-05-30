@@ -11,8 +11,8 @@ const WordAnimation = ({ word, translate,axis }) => {
     gsap.to(nameRef.current.children, {
       y: 0,
       stagger: 0.05,
-      delay: 1,
       duration: 0.1,
+      ease: "bounce",
     });
   }, []);
 

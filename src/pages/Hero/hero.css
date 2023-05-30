@@ -9,9 +9,9 @@
   font-size: 16rem;
   font-weight: 900;
   position: fixed;
-  z-index: 10;
-  top: 2.80%;
-  left: 2.2rem;
+  z-index: -10;
+  top: 24%;
+  left: 4rem;
   line-height: 0.9;
   color: var(--text);
 }
