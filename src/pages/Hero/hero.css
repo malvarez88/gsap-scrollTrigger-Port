@@ -98,6 +98,7 @@ section.character:before {
     left: 0;
     transform: translateY(100%);
     font-weight: 700;
+    /* text-shadow: 20px 70px 50px var(--text); */
 }
 
 .nickname {

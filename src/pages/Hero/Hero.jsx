@@ -218,9 +218,15 @@ const Hero = () => {
       });
 
 
+    // return () => {
+    //   scrollTween.kill();
+    // };
     return () => {
-      scrollTween.kill();
-    };
+        ScrollTrigger.getAll().forEach((trigger) => {
+          trigger.kill();
+        });
+        scrollTween.kill();
+      };
   }, []);
 
   return (
@@ -239,13 +245,13 @@ const Hero = () => {
           {/* <img src={mariano} alt="" ref={imgRef1}/> */}
           <span className="huge-text" ref={nameRef1}>Frontend</span>
           <div className="caption" ref={captionRef1}>
-          I'm a frontend developer, I live in Buenos Aires, Argentina.
+          Like this portfolio made with React and Gsap
           </div>
           <div className="nickname" ref={nickRef1}>
             <span>1</span>
           </div>
           <div className="quote" ref={quoteRef1}>
-            Javascript
+            I enjoy trying new things
           </div>
         </section>
 
@@ -254,16 +260,13 @@ const Hero = () => {
           {/* <img src={mariano} alt="" ref={imgRef2}/> */}
           <span className="huge-text" ref={nameRef2}>Developer</span>
           <div className="caption" ref={captionRef2}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            quas assumenda illo a, quibusdam in dolor odio sed, id porro
-            inventore quam esse iure minima accusantium, delectus quo reiciendis
-            placeat.
+            Or not...rigth?
           </div>
           <div className="nickname" ref={nickRef2}>
             <span>2</span>
           </div>
           <div className="quote" ref={quoteRef2}>
-            some other quote
+            sometimes something great may come from those things
           </div>
         </section>
       </div>

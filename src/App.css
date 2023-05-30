@@ -1,0 +1,13 @@
+.container {
+    height: 100vh;
+}
+
+.inner__container {
+    height: auto;
+    width: 100vw;
+    padding: 10rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
