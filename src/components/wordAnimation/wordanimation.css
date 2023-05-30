@@ -1,0 +1,13 @@
+.name {
+  font-family: "Bebas Neue", sans-serif;
+  top: 100px;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.name__container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}

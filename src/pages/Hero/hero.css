@@ -11,12 +11,13 @@
   position: fixed;
   z-index: 10;
   top: 2.80%;
-  left: 4rem;
+  left: 2.2rem;
   line-height: 0.9;
+  color: var(--text);
 }
 
 .line {
-  background-color: red;
+  background-color: var(--secondary-color);
   height: 2rem;
   position: absolute;
   top: 50%;
@@ -55,12 +56,12 @@ section.character:before {
 
 .mariano:before,
 .mariano .block {
-  background-color: #ffc107;
+  background-color: var(--primary-color);
 }
 
 .mariano-2:before,
 .mariano-2 .block {
-  background-color: #83cdc1;
+  background-color: var(--tertiary-color);
 }
 
 
@@ -91,7 +92,7 @@ section.character:before {
     font-size: 25rem;
     width: 100%;
     text-align: center;
-    color: #f52b2b;
+    color: var(--secondary-color);
     position: absolute;
     top: 20%;
     left: 0;
@@ -101,11 +102,12 @@ section.character:before {
 
 .nickname {
     position: absolute;
-    top: 4rem;
+    top: 7rem;
     right: 4rem;
     font-size: 3rem;
     text-align: right;
     transform: translateY(-200%); 
+    color: var(--text);
 }
 
 .nickname span {
@@ -122,6 +124,7 @@ section.character:before {
     width: 30%;
     text-align: right;
     transform: translateY(200%);
+    color: var(--text);
 }
 
 .quote:before, .quote::after {

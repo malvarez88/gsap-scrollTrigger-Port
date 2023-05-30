@@ -16,6 +16,12 @@
   --container-width-md: 86%;
   --container-width-sm: 90%;
   --transition: all 400ms ease;
+
+  --bg: #F1E7E4;
+  --primary-color : #6279B8;
+  --secondary-color: #D19C1D;
+  --tertiary-color: #43AA8B;
+  --text: #181528;
 }
 
 body {
@@ -23,5 +29,6 @@ body {
   min-height: 100vh;
   line-height: 1.3;
   font-size: 16px;
-  /* overflow: hidden; */
+  background-color: var(--bg);
+  overflow: scroll;
 }

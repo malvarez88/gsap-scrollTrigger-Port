@@ -2,7 +2,9 @@ import React, { useEffect, useRef } from "react";
 import "./hero.css";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import mariano from "../../assets/MA.png";
+import WordAnimation from '../../components/wordAnimation/wordAnimation'
+// import mariano from "../../assets/MA.png";
+
 
 const Hero = () => {
   const wrapperRef = useRef(null);
@@ -224,8 +226,7 @@ const Hero = () => {
   return (
     <>
       <div className="logo" ref={logoRef}>
-        Mariano <br/>Alvarez <br/>
-        Frontend <br/> Developer
+      <WordAnimation word="Mariano.Dev" translate={'225px'} axis={'y'}/>
       </div>
 
       <div className="wrapper" ref={wrapperRef}>
@@ -235,26 +236,23 @@ const Hero = () => {
 
         <section className="character mariano">
           <div className="block" ref={blockRef1}></div>
-          <img src={mariano} alt="" ref={imgRef1}/>
-          <span className="huge-text" ref={nameRef1}>Developer</span>
+          {/* <img src={mariano} alt="" ref={imgRef1}/> */}
+          <span className="huge-text" ref={nameRef1}>Frontend</span>
           <div className="caption" ref={captionRef1}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            quas assumenda illo a, quibusdam in dolor odio sed, id porro
-            inventore quam esse iure minima accusantium, delectus quo reiciendis
-            placeat.
+          I'm a frontend developer, I live in Buenos Aires, Argentina.
           </div>
           <div className="nickname" ref={nickRef1}>
-            <span>MAD</span>
+            <span>1</span>
           </div>
           <div className="quote" ref={quoteRef1}>
-            Some quote
+            Javascript
           </div>
         </section>
 
         <section className="character mariano-2">
           <div className="block" ref={blockRef2}></div>
-          <img src={mariano} alt="" ref={imgRef2}/>
-          <span className="huge-text" ref={nameRef2}>Designer</span>
+          {/* <img src={mariano} alt="" ref={imgRef2}/> */}
+          <span className="huge-text" ref={nameRef2}>Developer</span>
           <div className="caption" ref={captionRef2}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
             quas assumenda illo a, quibusdam in dolor odio sed, id porro
@@ -262,7 +260,7 @@ const Hero = () => {
             placeat.
           </div>
           <div className="nickname" ref={nickRef2}>
-            <span>MAD-2</span>
+            <span>2</span>
           </div>
           <div className="quote" ref={quoteRef2}>
             some other quote
