@@ -231,10 +231,10 @@ const Hero = () => {
       <div className="logo" ref={logoRef}>
         <WordAnimation word="Mariano.Dev" translate={"225px"} axis={"y"} />
       </div>
-
       <div className="wrapper" ref={wrapperRef}>
         <section className="intro">
           <div className="line" ref={lineRef}></div>
+         
         </section>
 
         <section className="character mariano">

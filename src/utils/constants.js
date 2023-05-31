@@ -28,6 +28,7 @@ const projects = [
     title: "Portfolio",
     slug: "Portfolio",
     github: "https://github.com/malvarez88/portfolio/tree/master",
+    deploy: 'https://www.marianodev.com',
     cta: "Github",
     description:
       "This is my portfolio, actually i don't need to explain a lot, you can see it by yourself 😉 Used technologies: React, Material UI, Javascript, CSS.",
@@ -37,7 +38,7 @@ const projects = [
     title: "Andes Origen - Fresquita",
     slug: "Andes",
     description:
-      "Developed a game, using animations in css and jquery. General maintenance of the web application.",
+      "Developed a game, using animations with CSS and JQuery. General maintenance of the web application.",
     image: andes,
     cta: "Deploy",
     deploy: "https://andesorigen.com.ar/fresquita/",

@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./work.css";
 import { projects } from "../../utils/constants";
-
 import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-const Modal = ({ project, openModal }) => {
-
+const Modal = ({ project, setIsOpen, isOpen, openModal }) => {
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -28,8 +27,8 @@ const Modal = ({ project, openModal }) => {
           <span className="close" onClick={openModal}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
+              width="26"
+              height="26"
               fill="currentColor"
               viewBox="0 0 16 16"
             >
@@ -40,6 +39,19 @@ const Modal = ({ project, openModal }) => {
           <div className="work__text">
             <h1>{project.title}</h1>
             <div className="description">{project.description}</div>
+
+            <div className="work__cta">
+              {project.deploy && (
+                <a href={project.deploy} target="_blank" rel="noreferrer">
+                  Deploy
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  Github
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -49,9 +61,35 @@ const Modal = ({ project, openModal }) => {
 
 const Work = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState();
+
+  const spanRef = useRef(null);
+  const workRef = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const current = workRef.current;
+
+    gsap.to(spanRef.current, {
+      x: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: current,
+        start: "top 200",
+        end: "+=20%",
+        scrub: true,
+      },
+    });
+  }, []);
 
   const openModal = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleClick = (project) => {
+    setSelectedProject(project);
+    openModal();
   };
 
   useEffect(() => {
@@ -62,6 +100,9 @@ const Work = () => {
     };
     if (isOpen) {
       document.addEventListener("keydown", handleKeyDown);
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
     }
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
@@ -69,7 +110,7 @@ const Work = () => {
   }, [isOpen]);
 
   return (
-    <div className="container work__container">
+    <div className="container work__container" ref={workRef}>
       <div className="work__gallery">
         <div className="work__title">
           <h1 className="title">Projects</h1>
@@ -81,23 +122,23 @@ const Work = () => {
                 src={project.image}
                 alt={project.slug}
                 className="work__img"
-                onClick={openModal}
+                onClick={() => handleClick(project)}
               />
               <span className="layer"></span>
               <span className="text">{project.slug}</span>
             </div>
             {isOpen && (
-              <Modal
-                project={project}
-                setIsOpen={setIsOpen}
-                isOpen={isOpen}
-                openModal={openModal}
-              />
+              <Modal project={selectedProject} openModal={openModal} />
             )}
           </>
         ))}
       </div>
       {isOpen && <div className="backdrop"></div>}
+      {/* <div className=""> */}
+      <span className="side" ref={spanRef}>
+        Here you can find some projects i worked in
+      </span>
+      {/* </div> */}
     </div>
   );
 };
