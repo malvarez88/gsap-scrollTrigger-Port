@@ -23,6 +23,7 @@ const projects = [
     cta: "Deploy",
     image: daura,
     deploy: "https://daura4.netlify.app/",
+    github: "https://github.com/malvarez88/daura-arq"
   },
   {
     title: "Portfolio",

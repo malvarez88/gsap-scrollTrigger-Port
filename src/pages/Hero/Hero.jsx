@@ -21,12 +21,15 @@ const Hero = () => {
   const imgRef2 = useRef(null);
   const nameRef1 = useRef(null);
   const nameRef2 = useRef(null);
+  const linkRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     const sections = gsap.utils.toArray("section");
     const current = wrapperRef.current;
+
+   
 
     let scrollTween = gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),
@@ -41,6 +44,8 @@ const Hero = () => {
         end: "3000",
       },
     });
+
+    gsap.to(linkRef.current, { opacity: 1, duration: 0.5 });
 
     gsap.to(logoRef.current, {
       fontSize: "2.5rem",
@@ -228,13 +233,23 @@ const Hero = () => {
 
   return (
     <>
+      <div className="links" >
+        <a className="link" href="#work" ref={linkRef}>
+          <span>Projects</span>
+        </a>
+        <a className="link" href="#work">
+          <span>Experience</span>
+        </a>
+        <a className="link" href="#work">
+          <span>About Me</span>
+        </a>
+      </div>
       <div className="logo" ref={logoRef}>
         <WordAnimation word="Mariano.Dev" translate={"225px"} axis={"y"} />
       </div>
       <div className="wrapper" ref={wrapperRef}>
         <section className="intro">
           <div className="line" ref={lineRef}></div>
-         
         </section>
 
         <section className="character mariano">

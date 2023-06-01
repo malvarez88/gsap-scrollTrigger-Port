@@ -110,7 +110,10 @@ const Work = () => {
   }, [isOpen]);
 
   return (
-    <div className="container work__container" ref={workRef}>
+    <div id="work" className="container work__container" ref={workRef}>
+        <span className="side" ref={spanRef}>
+        Here you can find some projects i worked in
+      </span>
       <div className="work__gallery">
         <div className="work__title">
           <h1 className="title">Projects</h1>
@@ -135,9 +138,7 @@ const Work = () => {
       </div>
       {isOpen && <div className="backdrop"></div>}
       {/* <div className=""> */}
-      <span className="side" ref={spanRef}>
-        Here you can find some projects i worked in
-      </span>
+      
       {/* </div> */}
     </div>
   );

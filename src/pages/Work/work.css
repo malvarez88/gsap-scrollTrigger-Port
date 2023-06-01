@@ -117,7 +117,7 @@ transform: scale(1.05) ;
 }
 
 .dialog {
-  background: #000;
+  background: var(--text);
   color: #fff;
   max-width: 1000px;
   height: auto;
@@ -194,5 +194,5 @@ transform: scale(1.05) ;
 }
 
 .work__cta a:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(7deg);
 }

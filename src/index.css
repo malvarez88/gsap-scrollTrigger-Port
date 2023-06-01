@@ -15,14 +15,24 @@
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
-  --transition: all 400ms ease;
 
-  --bg: #F1E7E4;
+
+  /* --bg: #F1E7E4;
   --primary-color : #6279B8;
   --secondary-color: #D19C1D;
   --tertiary-color: #43AA8B;
-  --text: #181528;
+  --text: #181528; */
+
+
+  --bg: #FBFBFF;
+  --primary-color : #01BAEF;
+  --secondary-color: #B80C09;
+  --tertiary-color: #0B4F6C;
+  --text: #040F16;
 }
+
+
+
 
 body {
   font-family: 'Bebas Neue', cursive;
@@ -32,6 +42,7 @@ body {
   background-color: var(--bg);
   overflow: scroll;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 
