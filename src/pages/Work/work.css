@@ -1,6 +1,6 @@
-/* .work__container {
-    padding: 10rem 4rem;
-} */
+.work__container {
+    position: relative;
+}
 
 .work__img {
   display: block;

@@ -2,6 +2,7 @@ import './App.css';
 
 
 import Hero from './pages/Hero/Hero';
+import Ripple from './pages/Ripple/Ripple';
 import Work from './pages/Work/Work';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
     <Hero />
     <Work />
+    <Ripple />
     </>
   );
 }

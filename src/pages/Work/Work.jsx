@@ -137,9 +137,6 @@ const Work = () => {
         ))}
       </div>
       {isOpen && <div className="backdrop"></div>}
-      {/* <div className=""> */}
-      
-      {/* </div> */}
     </div>
   );
 };

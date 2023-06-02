@@ -1,0 +1,27 @@
+.ripple {
+    height: 100vh;
+    padding: 8rem 4rem;
+    background: var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/grain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
+}
+
+
+.inner__ripple {
+    width: 400px;
+    height: 200px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    position: absolute;
+    /* z-index: -1; */
+    color: white;
+}
