@@ -1,5 +1,6 @@
 .work__container {
     position: relative;
+    scroll-snap-align: start;
 }
 
 .work__img {
