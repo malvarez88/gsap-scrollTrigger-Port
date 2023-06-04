@@ -1,0 +1,22 @@
+.audio__player{
+    position: absolute;
+    /* width: 200px;
+    height: 200px; */
+    z-index: 100;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4%;
+    right: 10%
+}
+
+.audio__btn {
+    background-color: transparent;
+    position: absolute;
+}
+
+.audio__img {
+    width: 20px;
+    height: 20px;
+}

@@ -1,4 +1,5 @@
 import './App.css';
+import AudioPlayer from './components/audioPlayer/AudioPlayer';
 
 
 import Hero from './pages/Hero/Hero';
@@ -8,9 +9,10 @@ import Work from './pages/Work/Work';
 function App() {
   return (
     <>
-    <Hero />
-    <Work />
+    {/* <Hero />
+    <Work /> */}
     <Ripple />
+    {/* <AudioPlayer /> */}
     </>
   );
 }
