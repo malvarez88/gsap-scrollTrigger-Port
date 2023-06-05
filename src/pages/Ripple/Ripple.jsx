@@ -11,12 +11,14 @@ const Ripple = () => {
   const rigthRef = useRef(null);
   const btnRef = useRef(null);
   const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
 
   useEffect(() => {
     gsap.to(titleRef.current, { opacity: 1, delay: 1 });
-    gsap.to(btnRef.current, { opacity: 1, delay: 1.2 });
-    gsap.to(leftRef.current, { opacity: 1, delay: 1.6 });
-    gsap.to(rigthRef.current, { opacity: 1, delay: 1.6 });
+    gsap.to(subtitleRef.current, { opacity: 1, delay: 1.5 });
+    gsap.to(btnRef.current, { opacity: 1, delay: 2 });
+    gsap.to(leftRef.current, { opacity: 1, delay: 2.2 });
+    gsap.to(rigthRef.current, { opacity: 1, delay: 2.2 });
 
     const current = ripplesRef.current;
     setTimeout(() => {
@@ -36,8 +38,11 @@ const Ripple = () => {
       <AudioPlayer />
       <div className="ripple__header">
         <h1 className="ripple__title" ref={titleRef}>
-        MAD
+          MAD
         </h1>
+        <h4 className="ripple__subtitle" ref={subtitleRef}>
+          Coming Soon
+        </h4>
         <a
           className="ripple__btn"
           href="https://www.marianodev.com"
