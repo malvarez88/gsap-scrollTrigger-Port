@@ -23,7 +23,7 @@ export const CustomCursor = ( ) => {
       }
     });
 
-    const hoverElements = document.querySelectorAll("a, button, h1, span");
+    const hoverElements = document.querySelectorAll("div");
     hoverElements.forEach((element) => {
       element.addEventListener("mouseenter", () => {
         cursorRef.current.classList.add("is-hovering");
